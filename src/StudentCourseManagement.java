@@ -10,12 +10,14 @@ public class StudentCourseManagement {
     // Read user input
     static Scanner input = new Scanner(System.in);
 
+
     // Display menu
     public static void displayMenu() {
         System.out.println("\n===== STUDENT COURSE MANAGEMENT SYSTEM =====");
         System.out.println("1. Add Course");
         System.out.println("2. View All Courses");
-        System.out.println("3. Exit");
+        System.out.println("3. Search Course by Code");
+        System.out.println("4. Exit");
         System.out.print("Enter your choice: ");
     }
 
@@ -42,6 +44,33 @@ public class StudentCourseManagement {
 
     // Display all courses
     public static void viewCourses() {
+        
+    // Search for a course by its code
+    public static void searchCourse() {
+
+        System.out.print("Enter course code to search: ");
+
+        String code = input.nextLine().trim().toUpperCase();
+
+        boolean found = false;
+
+        for (Course course : courses) {
+
+            if (course.getCode().equalsIgnoreCase(code)) {
+
+                System.out.println("\n===== COURSE FOUND =====");
+
+                course.displayCourse();
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Course not found.");
+        }
+    }
 
         if (courses.isEmpty()) {
             System.out.println("No courses have been added yet.");
@@ -61,7 +90,7 @@ public class StudentCourseManagement {
 
         int choice = 0;
 
-        while (choice != 3) {
+        while (choice != 4)
 
             displayMenu();
 
@@ -79,12 +108,17 @@ public class StudentCourseManagement {
                         break;
 
                     case 3:
+                        searchCourse();
+                        break;
+
+                    case 4:
                         System.out.println("Thank you for using the system!");
                         break;
 
                     default:
-                        System.out.println("Invalid choice. Please select 1-3.");
+                        System.out.println("Invalid choice. Please select 1-4.");
                 }
+
 
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a number.");
