@@ -54,4 +54,4 @@ java -cp src StudentCourseManagement
 - File reading and writing
 
 ## Author
-COS 201 Samson Okpochini
+Samson Okpochini
