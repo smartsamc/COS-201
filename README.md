@@ -1,79 +1,57 @@
 # Student Course Management System
 
-## COS 201 – Computer Programming I
+## Overview
+The Student Course Management System is a Java console application developed for the COS 201 Programming I mid-semester assessment.
 
-**Institution:** MIVA Open University
-**Project:** Mid-Semester Lab Assessment
-**Programming Language:** Java
-**Developer:** Samson Okpochini
-
-## Project Description
-
-The Student Course Management System is a Java console application designed to help students manage their courses for a semester.
-
-The system allows users to add courses, view recorded courses, search for specific courses, calculate total credit units, and save or load course records from a file.
+The system allows users to manage courses by adding, viewing, searching, calculating total course units, and saving or loading course records.
 
 ## Features
-
-- Add new courses with course code, course title, and credit units.
-- View all recorded courses.
-- Search for a course using its course code.
-- Calculate the total credit units of all courses.
-- Save course records to a file.
-- Load previously saved course records.
-- Menu-driven console interface.
-- Input validation and exception handling.
+- Add new courses with course code, title, and units.
+- View all registered courses.
+- Search for courses using their course code.
+- Calculate total course units using recursion.
+- Save course records to a text file.
+- Load saved course records from a text file.
+- Validate user input and handle exceptions.
+- Prevent duplicate course codes.
 
 ## Technologies Used
-
 - Java
 - Visual Studio Code
-- Git
-- GitHub
-
-## Java Concepts Demonstrated
-
-- Classes and objects
-- Methods
-- ArrayList
-- Loops and conditional statements
-- Recursion
-- Exception handling
-- File handling
-- String processing
-
-## How to Run the Application
-
-1. Install Java JDK.
-2. Open the project folder in Visual Studio Code.
-3. Open the terminal.
-4. Navigate to the `src` directory.
-5. Compile the Java program:
-
-   `javac StudentCourseManagement.java`
-
-6. Run the application:
-
-   `java StudentCourseManagement`
+- Git and GitHub
 
 ## Project Structure
-
 ```text
-COS201/
+COS 201/
 ├── src/
 │   ├── Course.java
 │   └── StudentCourseManagement.java
+├── courses.txt
 ├── README.md
-├── .gitignore
-└── courses.txt
+└── .gitignore
 ```
 
-## File Storage
+## How to Run
 
-The application uses a text file named `courses.txt` to save and retrieve course records.
+### Compile
+```bash
+javac src/Course.java src/StudentCourseManagement.java
+```
+
+### Run
+```bash
+java -cp src StudentCourseManagement
+```
+
+## Concepts Demonstrated
+- Classes and objects
+- Methods
+- ArrayList
+- Loops and decision-making
+- Input handling and string processing
+- Recursion
+- Exception handling
+- File reading and writing
 
 ## Author
-
-Samson Okpochini
-
-COS 201 – Computer Programming I
+COS 201 Samson Okpochini
